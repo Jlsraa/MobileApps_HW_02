@@ -58,6 +58,14 @@ class _HomePageState extends State<HomePage> {
               title: Text("Tu IMC es de: ${bmiCalculation.toStringAsFixed(2)}"),
               content: Text(
                   "Tabla de IMC para mujeres\n\nEdad    IMC Ideal \n15 a 20    18-19\n21 a 25    20-24\n26 a 30    21-25\n31 a 35    22-25\n36 a 39    23-27\n40 a 45    24-28\n46 a 50    25-29\n51 a 60    26-30\n   >60        27-31"),
+              actions: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("Aceptar", style: TextStyle(color: Colors.green)),
+                )
+              ],
             );
           });
     } else if (_maleButton == true) {
@@ -68,6 +76,14 @@ class _HomePageState extends State<HomePage> {
               title: Text("Tu IMC es de: ${bmiCalculation.toStringAsFixed(2)}"),
               content: Text(
                   "Tabla de IMC para hombres\n\nEdad    IMC Ideal\n15 a 20      6-15\n21 a 25      8-17\n26 a 30    10-18\n31 a 35    12-19\n36 a 39    14-20\n40 a 45    16-21\n46 a 50    18-22\n51 a 60    20-23\n   >60        22-26"),
+              actions: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text("Aceptar", style: TextStyle(color: Colors.green)),
+                )
+              ],
             );
           });
     }
